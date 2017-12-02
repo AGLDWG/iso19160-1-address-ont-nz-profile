@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>ISO19160-1:2015 Address ontology - NZ Profile</title>
+        <link href="http://pid.data.gov.au/websrv/static/LODE/owl.css" rel="stylesheet" type="text/css" />
+        <link href="http://pid.data.gov.au/websrv/static/LODE/Primer.css" rel="stylesheet" type="text/css" />
+        <link href="http://pid.data.gov.au/websrv/static/LODE/rec.css" rel="stylesheet" type="text/css" />
+        <link href="http://pid.data.gov.au/websrv/static/LODE/extra.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="http://pid.data.gov.au/websrv/static/LODE/favicon.ico" />
+        <script src="http://pid.data.gov.au/websrv/static/LODE/jquery.js"></script>
+        <script src="http://pid.data.gov.au/websrv/static/LODE/jquery.scrollTo.js"></script>
+        <script src="http://pid.data.gov.au/websrv/static/LODE/marked.min.js"></script>
+        <script>
+            $(document).ready(
+                function () {
+                	jQuery(".markdown").each(function(el){
+            jQuery(this).after(marked(jQuery(this).text())).remove()});
+                    var list = $('a[name="http://www.essepuntato.it/tmp/1512196334-ontology"]');
+                    if (list.size() != 0) {
+                    	var element = list.first();
+                    	$.scrollTo(element);
+                    }
+                });
+        </script>
+    </head>
+    <body>
+        <div class="head">
+            <h1>ISO19160-1:2015 Address ontology - NZ Profile</h1>
+            <dl>
+                <dt>IRI:</dt>
+                <dd>http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile</dd>
+                <dt>Version IRI:</dt>
+                <dd>http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile/1.0</dd>
+            </dl>
+            <dl>
+                <dt>Authors:</dt>
+                <dd>Tristan Reed</dd>
+                <dt>Contributors:</dt>
+                <dd>Nicholas Car</dd>
+            </dl>
+            <dl>
+                <dt>Publisher:</dt>
+                <dd>Australian Government Linked Data Working Group</dd>
+            </dl>
+            <dl>
+                <dt>Imported Ontologies:</dt>
+                <dd><a href="http://reference.data.gov.au/def/ont/iso19160-1-address">http://reference.data.gov.au/def/ont/iso19160-1-address</a></dd>
+            </dl>
+            <dl>
+                <dt>Other visualisation:</dt>
+                <dd><a href="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile.ttl">Ontology source (RDF turtle)</a></dd>
+            </dl>
+        </div>
+        <hr />
+        <h2>Abstract</h2>
+        <span class="markdown">This ontology an OWL ontology version of the New Zealand Profile of ISO 19160-1:2015 Addressing.</span>
+        <div id="toc">
+            <h2>Table of Content</h2>
+            <ol>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#annotationproperties">Annotation Properties</a></li>
+                <li><a href="#namespacedeclarations">Namespace Declarations</a></li>
+            </ol>
+        </div>
+        <div id="classes">
+            <h2>Classes</h2>
+            <ul class="hlist">
+                <li><a href="#AddressAlias" title="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressAlias"><span>address alias</span></a></li>
+                <li><a href="#AddressComponent" title="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressComponent"><span>address component</span></a></li>
+                <li><a href="#AddressableObject" title="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressableObject"><span>addressable object</span></a></li>
+                <li><a href="#AddressedPeriod" title="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressedPeriod"><span>addressed period</span></a></li>
+            </ul>
+            <div id="AddressAlias" class="entity">
+                <a name="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressAlias"></a>
+                <h3>address alias<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressAlias</p>
+                <div class="comment"><span class="markdown">ISO 19160 Address Alias class with the additional restrictions of requiring Address Alias lifecycle stage properties to have Address Lifecycle Stage class object and Address Alias lifespan to have Lifespan class objects as their range values.</span></div>
+                <dl class="description">
+                    <dt>has super-classes</dt>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressAlias">address alias</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressAlias.lifecycleStage">address alias.lifecycle stage</span><sup title="object property" class="type-op">op</sup> <span class="logic">only</span> <span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressLifecycleStage">address lifecycle stage</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressAlias.lifespan">address alias.lifespan</span><sup title="object property" class="type-op">op</sup> <span class="logic">only</span> <span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#Lifespan">lifespan</span><sup title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+            <div id="AddressComponent" class="entity">
+                <a name="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressComponent"></a>
+                <h3>address component<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressComponent</p>
+                <div class="comment"><span class="markdown">ISO 19160 Address Component class with the additional restrictions of requiring one and only one Address lifespan, Address provenance, Address Component lifecycle stage and an Address Component Value locale  properties</span></div>
+                <dl class="description">
+                    <dt>has super-classes</dt>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error943">error943</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error944">error944</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error945">error945</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error946">error946</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressComponent">address component</span><sup title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+            <div id="AddressableObject" class="entity">
+                <a name="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressableObject"></a>
+                <h3>addressable object<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressableObject</p>
+                <div class="comment"><span class="markdown">ISO 19160 Addressable Object class with the additional restrictions of requiring one and only one Address Component lifespan, Address Component position and an Address Component lifecycle stage properties.</span></div>
+                <dl class="description">
+                    <dt>has super-classes</dt>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error939">error939</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error940">error940</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error941">error941</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressableObject">addressable object</span><sup title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+            <div id="AddressedPeriod" class="entity">
+                <a name="http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressedPeriod"></a>
+                <h3>addressed period<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#AddressedPeriod</p>
+                <div class="comment"><span class="markdown">ISO 19160 Addressed Period class with the additional restriction of requiring at most one Address provenance properties.</span></div>
+                <dl class="description">
+                    <dt>has super-classes</dt>
+                    <dd><span class="dotted" title="http://org.semanticweb.owlapi/error#Error942">error942</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressedPeriod">addressed period</span><sup title="class" class="type-c">c</sup></dd>
+                    <dd><span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#Address.provenance">address.provenance</span><sup title="object property" class="type-op">op</sup> <span class="logic">only</span> <span class="dotted" title="http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance">address provenance</span><sup title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="annotationproperties">
+            <h2>Annotation Properties</h2>
+            <ul class="hlist">
+                <li><a href="#d4e35" title="http://def.isotc211.org/iso19150/-2/2012/base#constraint"><span>constraint</span></a></li>
+            </ul>
+            <div id="d4e35" class="entity">
+                <a name="http://def.isotc211.org/iso19150/-2/2012/base#constraint"></a>
+                <h3>constraint<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://def.isotc211.org/iso19150/-2/2012/base#constraint</p>
+            </div>
+        </div>
+        <div id="namespacedeclarations">
+            <h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+            <dl>
+                <dt><em>default namespace</em></dt>
+                <dd>http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile#</dd>
+                <dt>-1</dt>
+                <dd>http://standards.iso.org/iso/19160/-1/</dd>
+                <dt>base</dt>
+                <dd>http://def.isotc211.org/iso19150/-2/2012/base#</dd>
+                <dt>dc</dt>
+                <dd>http://purl.org/dc/elements/1.1/</dd>
+                <dt>error</dt>
+                <dd>http://org.semanticweb.owlapi/error#</dd>
+                <dt>iso19160-1-address</dt>
+                <dd>http://reference.data.gov.au/def/ont/iso19160-1-address#</dd>
+                <dt>iso19160-1-address-nz-profile</dt>
+                <dd>http://reference.data.gov.au/def/ont/iso19160-1-address-nz-profile/</dd>
+                <dt>ont</dt>
+                <dd>http://reference.data.gov.au/def/ont/</dd>
+                <dt>owl</dt>
+                <dd>http://www.w3.org/2002/07/owl#</dd>
+                <dt>rdf</dt>
+                <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+                <dt>rdfs</dt>
+                <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+                <dt>terms</dt>
+                <dd>http://purl.org/dc/terms/</dd>
+                <dt>xsd</dt>
+                <dd>http://www.w3.org/2001/XMLSchema#</dd>
+            </dl>
+        </div>
+        <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it">Silvio Peroni</a>.</p>
+    </body>
+</html>
