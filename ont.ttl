@@ -31,8 +31,8 @@
 #################################################################
 
 :AddressAlias a owl:Class ;
-               rdfs:subClassOf iso19160-1:AddressAlias ;
-               rdfs:subClassOf [ a owl:Restriction ;
+               rdfs:subClassOf iso19160-1:AddressAlias ,
+                              [ a owl:Restriction ;
                                 owl:onProperty iso19160-1:AddressAlias.lifecycleStage ;
                                 owl:allValuesFrom iso19160-1:AddressLifecycleStage
                               ] ,
@@ -40,13 +40,14 @@
                                 owl:onProperty iso19160-1:AddressAlias.lifespan ;
                                 owl:allValuesFrom iso19160-1:Lifespan
                               ] ;
+               rdfs:label "Address Alias"@en ;
                rdfs:comment "ISO 19160 Address Alias class with the additional restrictions of requiring Address Alias lifecycle stage properties to have Address Lifecycle Stage class object and Address Alias lifespan to have Lifespan class objects as their range values."@en ;
                <http://def.isotc211.org/iso19150/-2/2012/base#constraint> "Too many dates in Lifecycle for this purpose?"^^xsd:string .
 
 
 :AddressComponent a owl:Class ;
-                  rdfs:subClassOf iso19160-1:AddressComponent ;
-                  rdfs:subClassOf [ a owl:Restriction ;
+                  rdfs:subClassOf iso19160-1:AddressComponent ,
+                                    [ a owl:Restriction ;
                                       owl:onProperty iso19160-1:Address.lifespan ;
                                       owl:cardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
@@ -62,13 +63,13 @@
                                       owl:onProperty iso19160-1:AddressComponentValue.locale ;
                                       owl:cardinality "0"^^xsd:nonNegativeInteger
                                     ] ;
+                  rdfs:label "Address Component"@en ;
                   rdfs:comment "ISO 19160 Address Component class with the additional restrictions of requiring one and only one Address lifespan, Address provenance, Address Component lifecycle stage and an Address Component Value locale  properties"@en ;
                   <http://def.isotc211.org/iso19150/-2/2012/base#constraint> "Lifecycle (Lifespan) and Provenance elements are mandatory."^^xsd:string , "Locale elements not used."^^xsd:string .
 
-
 :AddressableObject a owl:Class ;
-                    rdfs:subClassOf iso19160-1:AddressableObject ;
-                    rdfs:subClassOf [ a owl:Restriction ;
+                    rdfs:subClassOf iso19160-1:AddressableObject ,
+                                     [ a owl:Restriction ;
                                        owl:onProperty iso19160-1:Address.lifespan ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -80,12 +81,13 @@
                                        owl:onProperty iso19160-1:AddressComponent.lifecycleStage ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ;
+                     rdfs:label "Addressable Object"@en ;
                      rdfs:comment "ISO 19160 Addressable Object class with the additional restrictions of requiring one and only one Address Component lifespan, Address Component position and an Address Component lifecycle stage properties."@en ;
                      <http://def.isotc211.org/iso19150/-2/2012/base#constraint> "AddressableObject.position <<codelist>> is not yet identified in the NZ Profile."^^xsd:string , "Lifecycle elements are mandatory in the NZ Profile."^^xsd:string .
 
 :AddressedPeriod a owl:Class ;
-                 rdfs:subClassOf iso19160-1:AddressedPeriod ;
-                 rdfs:subClassOf [ a owl:Restriction ;
+                 rdfs:subClassOf iso19160-1:AddressedPeriod ,
+                                 [ a owl:Restriction ;
                                    owl:onProperty iso19160-1:Address.provenance ;
                                    owl:allValuesFrom iso19160-1:AddressProvenance
                                  ] ,
@@ -93,6 +95,7 @@
                                    owl:onProperty iso19160-1:Address.provenance ;
                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                  ] ;
+                rdfs:label "Address Period"@en ;
                 rdfs:comment "ISO 19160 Addressed Period class with the additional restriction of requiring at most one Address provenance properties."@en .
 
 #################################################################
@@ -100,3 +103,10 @@
 #################################################################
 
 iso19160-1:Address <http://def.isotc211.org/iso19150/-2/2012/base#constraint> "Provenance elements may also be used in AddressedPeriod."^^xsd:string .
+
+# added property type declarations to improve LODE documentation
+iso19160-1:Address.lifespan a owl:ObjectProperty .
+iso19160-1:Address.provenance a owl:ObjectProperty .
+iso19160-1:AddressComponent.lifecycleStage a owl:ObjectProperty .
+iso19160-1:AddressComponentValue.locale a owl:ObjectProperty .
+iso19160-1:Address.position a owl:ObjectProperty .
