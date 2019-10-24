@@ -24,7 +24,7 @@ Curtin University
 
 Contributor:  
 **Nicholas Car**  
-*SData Systems Architect*  
+*Data Systems Architect*  
 SURROUND Australia Pty Ltd  
 <nicholas.car@surroundaustralia.com>  
 <http://orcid.org/0000-0002-8742-7730>
