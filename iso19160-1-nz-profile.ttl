@@ -16,7 +16,7 @@
       owl:versionIRI <http://linked.data.gov.au/def/iso19160-1-address-nz-profile/1.1> ;
       owl:imports <http://linked.data.gov.au/def/iso19160-1-address> ;
       dct:created "2017-12-02"^^xsd:date ;
-      dct:creator [ 
+      dct:contributor [ 
         a sdo:Person ;
         sdo:affiliation [
           a sdo:Organization ;
@@ -26,7 +26,7 @@
         sdo:email <mailto:tristan.reed@curtin.edu.au> ;
         sdo:name "Tristan W. Reed"
       ] ; 
-      dct:contributor [ 
+      Dct:creator [ 
         a sdo:Person ;
         sdo:affiliation [
           a sdo:Organization ;
