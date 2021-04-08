@@ -51,7 +51,7 @@
     a sdo:Organization ;
     sdo:identifier <https://linked.data.gov.au/org/agldwg> ;
     sdo:name "Australian Government Linked Data Working Group" ;
-    url "https://www.linked.data.gov.au"^xsd:anyURI ;
+    sdo:url "https://www.linked.data.gov.au"^xsd:anyURI ;
 .
 
 #################################################################
